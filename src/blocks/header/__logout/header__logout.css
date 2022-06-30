@@ -1,0 +1,14 @@
+.header__logout {
+    margin: 0 0 0 24px;
+    color: #A9A9A9;
+    padding: 0;
+    background: none;
+    font-size: 18px;
+    line-height: 22px;
+    border: none;
+
+}
+
+.header__logout:hover {
+    color: rgb(256, 256, 256, 0.4);
+}

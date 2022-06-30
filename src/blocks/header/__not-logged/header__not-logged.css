@@ -1,0 +1,12 @@
+.header__not-logged {
+    margin: auto 0 auto 0;
+    padding: 0;
+}
+
+.header__not-logged:visited {
+    color: #fff;
+}
+
+.header__not-logged:hover {
+    color: rgb(256, 256, 256, 0.6);
+}

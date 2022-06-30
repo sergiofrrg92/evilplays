@@ -1,0 +1,17 @@
+.not-logged-form__redirect {
+    text-align: center;
+    margin: 15px 0 0 0;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.not-logged-form__redirect:visited {
+    color: #fff;
+}
+
+.not-logged-form__redirect:hover {
+    color: rgb(256, 256, 256, 0.6);
+}
