@@ -4,7 +4,14 @@ import logo from '../images/evilplays.jpg';
 
 function Header() {
   return <header className="header">
-    <img id="logo" className="logo" src={logo} alt="logo" />
+      <div className="header__menu container">
+        <h1 className="header__title">Eviplays</h1>
+        <nav className="header__user-menu">
+          <p className="header__email">test@test.com</p>
+          <button className="header__logout" /*onClick={props.handleLogoutClick}*/>Log out</button>
+        </nav>
+    </div>
+    <img id="logo" className="logo container" src={logo} alt="logo" />
   </header>;
 }
 
