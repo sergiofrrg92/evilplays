@@ -1,6 +1,6 @@
 import React from "react";
 
-import logo from '../images/evilplays.jpg';
+import logo from '../images/evilplays-practicum-palette.jpeg';
 
 function Header() {
   return <header className="header">

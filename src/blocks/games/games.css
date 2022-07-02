@@ -1,0 +1,18 @@
+.games {
+    margin: 20px auto 0 auto;
+    padding: 20px 0 20px 0;
+    max-width: 984px;
+  }
+  
+  @media (max-width: 984px) {
+    .games {
+      max-width: 584px;
+    }
+  }
+  
+  @media (max-width: 584px) {
+    .games {
+      max-width: 282px;
+    }
+  }
+  
