@@ -8,15 +8,14 @@ function Main(props) {
           <ul className="games__grid">
             {props.cards.map(card => {
               return (<Card 
-                id={card.id} 
+                key={card.id} 
                 image={card.image} 
                 name={card.name} 
                 released={card.released}
                 rating={card.rating}
                 description={card.description}
-                /*onCardClick={props.onCardClick}
-                onCardLike={props.onCardLike}
-                onCardDelete={props.onCardDelete}*/
+                card={card}
+                onGameClick={props.onGameClick}
                 />
               );
             })}

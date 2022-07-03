@@ -1,0 +1,7 @@
+.popup-game__container {
+    padding: 20px;
+    position: relative;
+    margin: auto;
+    max-width: 50%;
+    z-index: 1;
+}
