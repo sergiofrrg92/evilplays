@@ -1,10 +1,10 @@
 import React from "react";
 
-function Card( {id, name, image, released, rating, description, card, onGameClick } ) {
+function Card( {id, name, image, released, rating, description, game, onGameClick } ) {
 
   function handleClick() {
-    console.log("Card: ", card);
-    onGameClick(card);
+    console.log("Card: ", game);
+    onGameClick(game);
   }
 
   return (
