@@ -1,7 +1,7 @@
 .popup-game__photo {
     max-height: 100%;
     max-width: 100%;
-    min-height: 700px;
-    min-width: 700px;
+    min-height: 40vh;
+    min-width: 40vw;
   }
   

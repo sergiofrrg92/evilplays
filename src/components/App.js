@@ -4,7 +4,8 @@ import Main from "./Main";
 import GamePopup from "./GamePopup";
 import Footer from "./Footer";
 
-import cards from "../utils/cards";
+import { games } from "../utils/games";
+import user from "../utils/user";
 
 function App() {
 
@@ -23,7 +24,8 @@ function App() {
     <>
         <Header/>
         <Main 
-          cards={cards}
+          user={user}
+          games={games}
           onGameClick={handleGameClick}
         />
         <GamePopup card={selectedGame} onClose={closeGamePopup}/>
