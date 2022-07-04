@@ -1,5 +1,6 @@
 .games__grid {
-    margin: 0;
+    margin: 20px 0 0 0;
+    width: 100%;
     display: grid;
     padding: 0;
     grid-template-columns: 1fr 1fr 1fr;

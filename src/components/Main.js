@@ -7,12 +7,10 @@ function Main(props) {
   const [query, setQuery] = React.useState("")
 
   function handleSearch(event) {
-    console.log(event.target.value);
     setQuery(event.target.value);
   }
 
   function renderCards() {
-    console.log("render cards");
     const filteredCards = props.cards.filter(card => {
       return card.name.toLowerCase().includes(query.toLowerCase());
     });

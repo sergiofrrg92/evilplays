@@ -8,6 +8,7 @@
 @import url(./blocks/header/__title/header__title.css);
 @import url(./blocks/header/__user-menu/header__user-menu.css);
 @import url(./blocks/header/__logout/header__logout.css);
+@import url(./blocks/search-bar/search-bar.css);
 @import url(./blocks/games/games.css);
 @import url(./blocks/games/__grid/games__grid.css);
 @import url(./blocks/game-card/game-card.css);

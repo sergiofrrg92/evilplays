@@ -3,7 +3,7 @@ import React from "react";
 function SearchBar( props ) {
 
   return (
-    <input onChange={props.onInputChange}></input>
+    <input className="search-bar" placeholder="Search..." onChange={props.onInputChange}></input>
   );
 }
 
