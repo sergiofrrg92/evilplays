@@ -26,6 +26,7 @@
 @import url(./blocks/footer/__social-icons/footer__social-icons.css);
 @import url(./blocks/popup/popup.css);
 @import url(./blocks/popup/_opened/popup_opened.css);
+@import url(./blocks/popup/__close-button/popup__close-button.css);
 @import url(./blocks/popup-game/__container/popup-game__container.css);
 @import url(./blocks/popup-game/__photo/popup-game__photo.css);
 @import url(./blocks/popup-game/__description/popup-game__description.css);

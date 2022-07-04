@@ -2,12 +2,12 @@ function GamePopup(props) {
     return (
         <div className={`popup popup-game ${props.card && 'popup_opened'}`}>
             <div className="popup-game__container container">
-              {/* <button
+              { <button
                 type="button"
                 className="popup__close-button"
                 aria-label="Photo close button"
                 onClick={props.onClose}
-              ></button> */}
+              ></button> }
               <img
                 className="popup-game__photo"
                 src={props.card && props.card.image}
