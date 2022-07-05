@@ -16,6 +16,11 @@ function App() {
     setSelectedGame(card);
   }
 
+  function handleAddClick(game) {
+    user.games.push(game);
+  }
+
+
   function closeGamePopup() {
     setSelectedGame(null);
   }
@@ -27,6 +32,7 @@ function App() {
           user={user}
           games={games}
           onGameClick={handleGameClick}
+          onAddClick={handleAddClick}
         />
         <GamePopup card={selectedGame} onClose={closeGamePopup}/>
         <Footer/>

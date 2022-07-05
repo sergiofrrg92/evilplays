@@ -36,6 +36,9 @@ function Main(props) {
                 description={game.description}
                 game={game}
                 onGameClick={props.onGameClick}
+                onAddClick={props.onAddClick}
+                allGamesSelected={allGamesSelected}
+                myGamesSelected={myGamesSelected}
               />;
     });
   }
