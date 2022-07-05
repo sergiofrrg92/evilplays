@@ -34,6 +34,7 @@ function Main(props) {
                 released={game.released}
                 rating={game.rating}
                 description={game.description}
+                hoursPlayed={game.hoursPlayed}
                 game={game}
                 onGameClick={props.onGameClick}
                 onAddClick={props.onAddClick}
@@ -42,6 +43,18 @@ function Main(props) {
               />;
     });
   }
+
+  function totalHours() {
+    let sum = 0;
+    props.user.games.forEach(element => {
+      sum+=element.hoursPlayed;
+    });
+
+    return sum;
+  }
+
+  const totalHoursPlayed = totalHours();
+  console.log(totalHoursPlayed);
 
   return (
     <main className="main">
@@ -58,6 +71,7 @@ function Main(props) {
           <ul className="games__grid">
             { allGamesSelected ? renderGames(props.games) : renderGames(props.user.games) }
           </ul>
+          {myGamesSelected && <p className="games__total-hours">Total hours: {totalHoursPlayed}</p>}
         </section>
     </main>
   );
