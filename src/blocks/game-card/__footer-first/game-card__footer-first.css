@@ -1,0 +1,4 @@
+.game-card__footer-first {
+    display: flex;
+    flex-direction: row;
+}

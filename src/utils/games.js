@@ -9,7 +9,7 @@ const games = [
     },
     {
         id : 1,
-        name:"Red Dead Redepmtion 2",
+        name:"Red Dead Redemption 2",
         released:"2019-05-28",
         image : "https://img.g2a.com/1080x1080/1x1x0/red-dead-redemption-2-rockstar-key-global/5da85be37e696c2b755a1612",
         rating : 4.47,

@@ -13,13 +13,16 @@
 @import url(./blocks/games/__grid/games__grid.css);
 @import url(./blocks/games/__tab-selector/games__tab-selector.css);
 @import url(./blocks/games/__tab-selector/_selected/games__tab-selector_selected.css);
+@import url(./blocks/games/__total-hours/games__total-hours.css);
 @import url(./blocks/game-card/game-card.css);
 @import url(./blocks/game-card/__image/game-card__image.css);
 @import url(./blocks/game-card/__footer/game-card__footer.css);
+@import url(./blocks/game-card/__footer-first/game-card__footer-first.css);
 @import url(./blocks/game-card/__title/game-card__title.css);
 @import url(./blocks/game-card/__rating/game-card__rating.css);
 @import url(./blocks/game-card/__rating-number/game-card__rating-number.css);
 @import url(./blocks/game-card/__star/game-card__star.css);
+@import url(./blocks/game-card/__hours/game-card__hours.css);
 @import url(./blocks/game-card/__add-button/game-card__add-button.css);
 @import url(./blocks/game-card/__remove-button/game-card__remove-button.css);
 @import url(./blocks/footer/footer.css);

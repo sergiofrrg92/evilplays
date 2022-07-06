@@ -21,6 +21,7 @@ function Card( {id, name, image, released, rating, description, hoursPlayed, gam
     <li className="game-card">
         <img className="game-card__image" src={image} alt={name} onClick={handleClick}/>
         <div className="game-card__footer">
+          <div className="game-card__footer-first">
             <h2 className="game-card__title">{name}</h2>
               <div className="game-card__rating">
                 <p className="game-card__rating-number">{Math.round(rating * 10) / 10}</p>
@@ -30,6 +31,7 @@ function Card( {id, name, image, released, rating, description, hoursPlayed, gam
                   alt="Star"
                       />
             </div>
+          </div>
             {myGamesSelected && <p className="game-card__hours">Hours Played: {hoursPlayed}</p>}
         </div>
         { allGamesSelected ? 

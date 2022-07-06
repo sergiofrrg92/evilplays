@@ -26,6 +26,7 @@ function App() {
     });
 
     if (!isFound) {
+      game.hoursPlayed = 0;
       user.games.push(game);
     }
   }
