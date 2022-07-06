@@ -21,6 +21,7 @@
 @import url(./blocks/game-card/__rating-number/game-card__rating-number.css);
 @import url(./blocks/game-card/__star/game-card__star.css);
 @import url(./blocks/game-card/__add-button/game-card__add-button.css);
+@import url(./blocks/game-card/__remove-button/game-card__remove-button.css);
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/footer/__author/footer__author.css);
 @import url(./blocks/footer/__columns/footer__columns.css);

@@ -7,6 +7,7 @@ function Main(props) {
   const [query, setQuery] = React.useState("")
   const [allGamesSelected, setAllGamesSelected] = React.useState(true);
   const [myGamesSelected, setMyGamesSelected] = React.useState(false);
+  const [myGamesSelectedModified, setMyGamesSelectedModified] = React.useState(false);
 
   function handleSearch(event) {
     setQuery(event.target.value);
@@ -15,11 +16,19 @@ function Main(props) {
   function handleAllGamesClick() {
     setAllGamesSelected(true);
     setMyGamesSelected(false);
+    setMyGamesSelectedModified(false);
   }
 
   function handleMyGamesClick() {
     setAllGamesSelected(false);
     setMyGamesSelected(true);
+    setMyGamesSelectedModified(false);
+  }
+
+  function handleRemoveClick(game) {
+    console.log("Removing: ", game);
+    props.user.games.splice(props.user.games.indexOf(game), 1);
+    setMyGamesSelectedModified(true);
   }
 
   function renderGames(games) {
@@ -38,6 +47,7 @@ function Main(props) {
                 game={game}
                 onGameClick={props.onGameClick}
                 onAddClick={props.onAddClick}
+                onRemoveClick={handleRemoveClick}
                 allGamesSelected={allGamesSelected}
                 myGamesSelected={myGamesSelected}
               />;
@@ -69,7 +79,7 @@ function Main(props) {
             >My Games</button>
           <SearchBar onInputChange={handleSearch}/>
           <ul className="games__grid">
-            { allGamesSelected ? renderGames(props.games) : renderGames(props.user.games) }
+            { allGamesSelected && !myGamesSelectedModified ? renderGames(props.games) : renderGames(props.user.games) }
           </ul>
           {myGamesSelected && <p className="games__total-hours">Total hours: {totalHoursPlayed}</p>}
         </section>

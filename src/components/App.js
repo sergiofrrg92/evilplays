@@ -20,6 +20,12 @@ function App() {
     user.games.push(game);
   }
 
+  function handleRemoveClick(game) {
+    console.log("Removing: ", game);
+    user.games.splice(user.games.indexOf(game), 1);
+    console.log(user.games);
+  }
+
 
   function closeGamePopup() {
     setSelectedGame(null);
@@ -33,6 +39,7 @@ function App() {
           games={games}
           onGameClick={handleGameClick}
           onAddClick={handleAddClick}
+          onRemoveClick={handleRemoveClick}
         />
         <GamePopup card={selectedGame} onClose={closeGamePopup}/>
         <Footer/>
