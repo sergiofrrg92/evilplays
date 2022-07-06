@@ -33,7 +33,7 @@ function Main(props) {
   }
 
   function handleRemoveClick(game) {
-    props.user.games.splice(props.user.games.indexOf(game), 1);
+    props.onRemoveClick();
     setMyGamesSelectedModified(true);
   }
 

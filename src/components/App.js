@@ -17,13 +17,21 @@ function App() {
   }
 
   function handleAddClick(game) {
-    user.games.push(game);
+    const isFound = user.games.some(element => {
+      if(element.id === game.id) {
+        return true;
+      } 
+
+      return false;
+    });
+
+    if (!isFound) {
+      user.games.push(game);
+    }
   }
 
   function handleRemoveClick(game) {
-    console.log("Removing: ", game);
     user.games.splice(user.games.indexOf(game), 1);
-    console.log(user.games);
   }
 
 
