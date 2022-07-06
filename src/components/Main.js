@@ -9,6 +9,13 @@ function Main(props) {
   const [myGamesSelected, setMyGamesSelected] = React.useState(false);
   const [myGamesSelectedModified, setMyGamesSelectedModified] = React.useState(false);
 
+  React.useEffect(() => {
+    if (myGamesSelectedModified) {
+      setMyGamesSelected(true);
+      setMyGamesSelectedModified(false);
+    }
+  }, [myGamesSelectedModified]);
+  
   function handleSearch(event) {
     setQuery(event.target.value);
   }
@@ -26,7 +33,6 @@ function Main(props) {
   }
 
   function handleRemoveClick(game) {
-    console.log("Removing: ", game);
     props.user.games.splice(props.user.games.indexOf(game), 1);
     setMyGamesSelectedModified(true);
   }
