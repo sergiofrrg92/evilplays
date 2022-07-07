@@ -2,7 +2,7 @@ import React from "react";
 
 import star from '../images/star.svg';
 
-function Card( {id, name, image, released, rating, description, hoursPlayed, game, onGameClick, onAddClick, onRemoveClick, allGamesSelected, myGamesSelected } ) {
+function Card( {id, name, image, released, rating, description, hoursPlayed, game, onGameClick, onAddClick, onRemoveClick, allGamesSelected, myGamesSelected, onEditHoursClick } ) {
 
   function handleClick() {
     console.log("Card: ", game);
@@ -15,6 +15,10 @@ function Card( {id, name, image, released, rating, description, hoursPlayed, gam
 
   function handleRemoveClick() {
     onRemoveClick(game);
+  }
+
+  function handleEditHoursClick() {
+    onEditHoursClick(game);
   }
 
   return (
@@ -32,7 +36,8 @@ function Card( {id, name, image, released, rating, description, hoursPlayed, gam
                       />
             </div>
           </div>
-            {myGamesSelected && <p className="game-card__hours">Hours Played: {hoursPlayed}</p>}
+            {myGamesSelected && 
+              <p className="game-card__hours" onClick={handleEditHoursClick}>Hours Played: {hoursPlayed}</p>}
         </div>
         { allGamesSelected ? 
               <button

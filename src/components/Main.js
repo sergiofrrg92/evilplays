@@ -54,6 +54,7 @@ function Main(props) {
                 onGameClick={props.onGameClick}
                 onAddClick={props.onAddClick}
                 onRemoveClick={handleRemoveClick}
+                onEditHoursClick={props.onEditHoursClick}
                 allGamesSelected={allGamesSelected}
                 myGamesSelected={myGamesSelected}
               />;
@@ -63,7 +64,7 @@ function Main(props) {
   function totalHours() {
     let sum = 0;
     props.user.games.forEach(element => {
-      sum+=element.hoursPlayed;
+      sum+=parseInt(element.hoursPlayed);
     });
 
     return sum;
