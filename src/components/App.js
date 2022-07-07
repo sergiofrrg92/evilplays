@@ -10,10 +10,38 @@ import user from "../utils/user";
 
 function App() {
 
+  const [loggedIn, setLoggedIn] = React.useState(true);
+  const [currentUser, setCurrentUser] = React.useState({});
   const [selectedGame, setSelectedGame] = React.useState(null);
   const [selectedGameForEdition, setSelectedGameForEdition] = React.useState(null);
   const [isEditHoursPopupOpen, setIsEditHoursPopupOpen] = React.useState(false);
 
+  React.useEffect(() => {
+    console.log("Loading user");
+    setCurrentUser( currentData => ({
+      ...currentData,
+      ...user
+    }));
+    setLoggedIn(true);
+    console.log(currentUser);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function handleLogoutClick() {
+    console.log("login out");
+    setLoggedIn(false);
+    setCurrentUser({});
+  }
+
+  function handleLoginClick() {
+    console.log("login in");
+    setLoggedIn(true);
+    setCurrentUser( currentData => ({
+      ...currentData,
+      ...user
+    }));
+  }
+  
   function handleGameClick(card) {
     console.log("handleGameClick: ", card);
     setSelectedGame(card);
@@ -55,7 +83,7 @@ function App() {
   
   return (
     <>
-        <Header/>
+        <Header loggedIn={loggedIn} user={currentUser.email} onLoginClick={handleLoginClick} onLogoutClick={handleLogoutClick}/>
         <Main 
           user={user}
           games={games}

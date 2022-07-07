@@ -2,13 +2,14 @@ import React from "react";
 
 import logo from '../images/evilplays-practicum-palette.jpeg';
 
-function Header() {
+function Header(props) {
   return <header className="header">
       <div className="header__menu container">
         <h1 className="header__title">Evilplays</h1>
         <nav className="header__user-menu">
-          <p className="header__email">test@test.com</p>
-          <button className="header__logout" /*onClick={props.handleLogoutClick}*/>Log out</button>
+          {props.loggedIn && <p className="header__email">{props.user}</p>}
+          {props.loggedIn && <button className="header__log-button" onClick={props.onLogoutClick}>Log out</button>}
+          {!props.loggedIn && <button className="header__log-button" onClick={props.onLoginClick}>Log In</button>}
         </nav>
     </div>
     <img id="logo" className="logo container" src={logo} alt="logo" />
