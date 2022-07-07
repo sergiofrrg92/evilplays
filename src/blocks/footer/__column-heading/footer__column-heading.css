@@ -5,3 +5,10 @@
   margin: 0;
   padding: 0;
 }
+
+@media (max-width: 984px) {
+  .footer__column-heading {
+    line-height: 20px;
+    font-size: 14px;
+  }
+}

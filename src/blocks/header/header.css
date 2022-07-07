@@ -2,6 +2,12 @@
     margin: 90px auto 0 auto;
     max-width: 984px;
   }
+
+  @media (max-width: 984px) {
+    .header {
+      width: 90%;
+    }
+  }
   
   @media (max-width: 320px) {
     .header {

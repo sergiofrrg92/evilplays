@@ -11,3 +11,15 @@
     line-height: 24px;
     color: #fff;
 }
+
+@media (max-width: 584px) {
+    .header__log-button {
+        width: 80%;
+        margin: 0 auto 0 auto;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 10px 14px;
+    }
+
+  }
+  

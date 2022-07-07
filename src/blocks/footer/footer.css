@@ -5,3 +5,16 @@
   max-width: 984px;
   
 }
+
+
+@media (max-width: 984px) {
+  .footer {
+    width: 90%;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer {
+    margin: 50px auto 0 auto;
+  }
+}

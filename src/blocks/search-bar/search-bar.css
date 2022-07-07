@@ -12,3 +12,11 @@
     font-size: 16px;
     line-height: 20px;
 }
+
+@media (max-width: 584px) {
+    .photos {
+      margin: 36px auto 0 auto;
+      max-width: 282px;
+    }
+  }
+  

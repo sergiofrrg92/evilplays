@@ -7,3 +7,10 @@
   text-decoration: none;
   color: inherit;
 }
+
+@media (max-width: 984px) {
+  .footer__column-link {
+    line-height: 20px;
+    font-size: 14px;
+  }
+}
