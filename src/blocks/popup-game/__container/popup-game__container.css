@@ -3,4 +3,5 @@
     position: relative;
     margin: auto;
     z-index: 1;
+    max-width: 80vw;
 }

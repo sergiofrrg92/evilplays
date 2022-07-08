@@ -5,8 +5,9 @@ import GamePopup from "./GamePopup";
 import Footer from "./Footer";
 import EditHoursPopup from "./EditHoursPopup";
 
-import { games } from "../utils/games";
 import user from "../utils/user";
+
+import { api } from '../utils/rawgApi';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
   const [selectedGame, setSelectedGame] = React.useState(null);
   const [selectedGameForEdition, setSelectedGameForEdition] = React.useState(null);
   const [isEditHoursPopupOpen, setIsEditHoursPopupOpen] = React.useState(false);
+  const [games, setGames] = React.useState([]);
 
   React.useEffect(() => {
     console.log("Loading user");
@@ -25,6 +27,19 @@ function App() {
     setLoggedIn(true);
     console.log(currentUser);
   // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  React.useEffect(() => {
+
+    api.getInitialGames()
+      .then((newGames) => {
+        console.log("api.getInitialGames: ");
+        console.log(newGames);
+        setGames(newGames.results);
+      })
+      .catch( err => {
+        console.log(err);
+      });
   }, []);
 
   function handleLogoutClick() {

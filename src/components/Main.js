@@ -44,7 +44,7 @@ function Main(props) {
     return filteredGames.map(game => {
       return <Card 
                 key={game.id} 
-                image={game.image} 
+                image={game.background_image} 
                 name={game.name} 
                 released={game.released}
                 rating={game.rating}

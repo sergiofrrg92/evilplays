@@ -10,7 +10,7 @@ function GamePopup(props) {
               ></button> }
               <img
                 className="popup-game__photo"
-                src={props.card && props.card.image}
+                src={props.card && props.card.background_image}
                 alt="Selected"
               />
               <p className="popup-game__title">{props.card && props.card.name}</p>
