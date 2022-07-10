@@ -15,7 +15,6 @@ function GamePopup(props) {
               />
               <p className="popup-game__title">{props.card && props.card.name}</p>
               <p className="popup-game__ratings">{props.card && props.card.rating}</p>
-              <p className="popup-game__description">{props.card && props.card.description}</p>
             </div>
           </div>
         );
