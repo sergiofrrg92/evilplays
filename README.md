@@ -1,4 +1,8 @@
 # Evilplays Frontend
+
+## Hosted 
+
+https://sergiofrrg92.github.io/evilplays-frontend/
   
 ## EvilPlays
 
