@@ -128,7 +128,7 @@ function App() {
     <div className="page__container">
         <Header loggedIn={loggedIn} user={currentUser.email} onLoginClick={handleLoginClick} onLogoutClick={handleLogoutClick}/>
         <Switch>
-          <Route exact path="/">
+          <Route>
             <Main 
               user={user}
               currentGameIndex = {currentGameIndex}
