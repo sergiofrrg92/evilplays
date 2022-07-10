@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "./static/css/main.a5bbe52c.css",
+    "main.js": "./static/js/main.24f925d1.js",
+    "static/js/787.92cce79b.chunk.js": "./static/js/787.92cce79b.chunk.js",
+    "static/media/Inter-Medium.woff?v=3.19": "./static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Black.woff?v=3.19": "./static/media/Inter-Black.c6938660eec019fefd68.woff",
+    "static/media/Inter-Regular.woff?v=3.19": "./static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/Inter-Medium.woff2?v=3.19": "./static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/Inter-Black.woff2?v=3.19": "./static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/Inter-Regular.woff2?v=3.19": "./static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "static/media/evilplays-practicum-palette.jpeg": "./static/media/evilplays-practicum-palette.a18b20ee79bcebb4b79e.jpeg",
+    "index.html": "./index.html",
+    "static/media/instagram.svg": "./static/media/instagram.58343ea253613167c66a1909840b2d30.svg",
+    "static/media/star.svg": "./static/media/star.fc63c50028b82cd65bcddd5dc851ac84.svg",
+    "static/media/add-icon.svg": "./static/media/add-icon.963d62960c908f2e36a5.svg",
+    "static/media/facebook.svg": "./static/media/facebook.ed57b640744ceccd3f18032d96c96255.svg",
+    "static/media/white-cross.svg": "./static/media/white-cross.4f1395563628889f6611.svg",
+    "static/media/minus.svg": "./static/media/minus.800f5cfe580c0b6a02c7.svg",
+    "main.a5bbe52c.css.map": "./static/css/main.a5bbe52c.css.map",
+    "main.24f925d1.js.map": "./static/js/main.24f925d1.js.map",
+    "787.92cce79b.chunk.js.map": "./static/js/787.92cce79b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5bbe52c.css",
+    "static/js/main.24f925d1.js"
+  ]
+}
