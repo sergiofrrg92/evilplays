@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/evilplays-frontend/static/css/main.9c224080.css",
-    "main.js": "/evilplays-frontend/static/js/main.8a90a450.js",
+    "main.js": "/evilplays-frontend/static/js/main.f51228d3.js",
     "static/js/787.92cce79b.chunk.js": "/evilplays-frontend/static/js/787.92cce79b.chunk.js",
     "static/media/Inter-Medium.woff?v=3.19": "/evilplays-frontend/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff?v=3.19": "/evilplays-frontend/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -18,11 +18,11 @@
     "static/media/white-cross.svg": "/evilplays-frontend/static/media/white-cross.4f1395563628889f6611.svg",
     "static/media/minus.svg": "/evilplays-frontend/static/media/minus.800f5cfe580c0b6a02c7.svg",
     "main.9c224080.css.map": "/evilplays-frontend/static/css/main.9c224080.css.map",
-    "main.8a90a450.js.map": "/evilplays-frontend/static/js/main.8a90a450.js.map",
+    "main.f51228d3.js.map": "/evilplays-frontend/static/js/main.f51228d3.js.map",
     "787.92cce79b.chunk.js.map": "/evilplays-frontend/static/js/787.92cce79b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9c224080.css",
-    "static/js/main.8a90a450.js"
+    "static/js/main.f51228d3.js"
   ]
 }
