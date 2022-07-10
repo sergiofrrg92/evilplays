@@ -37,6 +37,10 @@ function Main(props) {
     setMyGamesSelectedModified(true);
   }
 
+  function handleShowMoreClick() {
+    props.onShowMoreClick();
+  }
+
   function renderGames(games) {
     const filteredGames = games.filter(game => {
       return game.name.toLowerCase().includes(query.toLowerCase());
@@ -89,6 +93,12 @@ function Main(props) {
             { allGamesSelected && !myGamesSelectedModified ? renderGames(props.games) : renderGames(props.user.games) }
           </ul>
           {myGamesSelected && <p className="games__total-hours">Total hours: {totalHoursPlayed}</p>}
+          {props.currentGameIndex < props.allGames.length && 
+          <button 
+            className={`games__show-more`}
+            onClick={handleShowMoreClick}
+            >Show more</button>
+        }
         </section>
     </main>
   );

@@ -14,6 +14,7 @@
 @import url(./blocks/games/__grid/games__grid.css);
 @import url(./blocks/games/__tab-selector/games__tab-selector.css);
 @import url(./blocks/games/__tab-selector/_selected/games__tab-selector_selected.css);
+@import url(./blocks/games/__show-more/games__show-more.css);
 @import url(./blocks/games/__total-hours/games__total-hours.css);
 @import url(./blocks/game-card/game-card.css);
 @import url(./blocks/game-card/__image/game-card__image.css);

@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Switch } from "react-router-dom";
 import Header from "./Header";
 import Main from "./Main";
 import GamePopup from "./GamePopup";
@@ -11,12 +12,16 @@ import { api } from '../utils/rawgApi';
 
 function App() {
 
+  const SHOWN_DELTA = 6;
+
   const [loggedIn, setLoggedIn] = React.useState(true);
   const [currentUser, setCurrentUser] = React.useState({});
   const [selectedGame, setSelectedGame] = React.useState(null);
   const [selectedGameForEdition, setSelectedGameForEdition] = React.useState(null);
   const [isEditHoursPopupOpen, setIsEditHoursPopupOpen] = React.useState(false);
+  const [currentGameIndex, setCurrentGameIndex] = React.useState(0);
   const [games, setGames] = React.useState([]);
+  const [shownGames, setShownGames] = React.useState([]);
 
   React.useEffect(() => {
     console.log("Loading user");
@@ -35,12 +40,21 @@ function App() {
       .then((newGames) => {
         console.log("api.getInitialGames: ");
         console.log(newGames);
+        console.log(newGames.results.slice(0, SHOWN_DELTA));
         setGames(newGames.results);
+        if(newGames.results.length >= currentGameIndex + SHOWN_DELTA) {
+          setShownGames(newGames.results.slice(0, currentGameIndex+SHOWN_DELTA));
+          setCurrentGameIndex(currentGameIndex + SHOWN_DELTA);
+        } else {
+          setShownGames(newGames.results.slice(currentGameIndex, newGames.results.length));
+          setCurrentGameIndex(newGames.results.length);
+        }
+        
       })
       .catch( err => {
         console.log(err);
       });
-  }, []);
+  }, [loggedIn]);
 
   function handleLogoutClick() {
     console.log("login out");
@@ -86,6 +100,20 @@ function App() {
     setIsEditHoursPopupOpen(true);
   }
 
+  function handleShowMoreClick() {
+    console.log("handleShowMoreClick: ", currentGameIndex);
+    console.log(games);
+    console.log(shownGames);
+    if(currentGameIndex + SHOWN_DELTA < games.length) {
+      console.log([...shownGames, ...games.slice(currentGameIndex, currentGameIndex+SHOWN_DELTA)])
+      setShownGames([...shownGames, ...games.slice(currentGameIndex, currentGameIndex+SHOWN_DELTA)]);
+      setCurrentGameIndex(currentGameIndex + SHOWN_DELTA);
+    } else {
+      setShownGames([...shownGames, ...games.slice(currentGameIndex, games.length)]);
+      setCurrentGameIndex(games.length);
+    }
+  }
+
   function closeAllPopups() {
     setSelectedGame(null);
     setIsEditHoursPopupOpen(false);
@@ -97,22 +125,28 @@ function App() {
   }
   
   return (
-    <>
+    <div className="page__container">
         <Header loggedIn={loggedIn} user={currentUser.email} onLoginClick={handleLoginClick} onLogoutClick={handleLogoutClick}/>
-        <Main 
-          user={user}
-          games={games}
-          onGameClick={handleGameClick}
-          onAddClick={handleAddClick}
-          onRemoveClick={handleRemoveClick}
-          onEditHoursClick={handleEditHoursClick}
-        />
+        <Switch>
+          <Route exact path="/">
+            <Main 
+              user={user}
+              currentGameIndex = {currentGameIndex}
+              games={shownGames}
+              allGames={games}
+              onGameClick={handleGameClick}
+              onAddClick={handleAddClick}
+              onRemoveClick={handleRemoveClick}
+              onEditHoursClick={handleEditHoursClick}
+              onShowMoreClick={handleShowMoreClick}
+            />
+          </Route>
+        </Switch>
         <GamePopup card={selectedGame} onClose={closeAllPopups}/>
         <Footer/>
-
         <EditHoursPopup game={selectedGameForEdition} isOpen={isEditHoursPopupOpen} onClose={closeAllPopups} onEditHoursSubmit={handleEditHoursSubmit}/>
         
-    </>
+    </div>
   );
 }
 
