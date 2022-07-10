@@ -33,7 +33,7 @@ function Main(props) {
   }
 
   function handleRemoveClick(game) {
-    props.onRemoveClick();
+    props.onRemoveClick(game);
     setMyGamesSelectedModified(true);
   }
 
@@ -75,7 +75,6 @@ function Main(props) {
   }
 
   const totalHoursPlayed = totalHours();
-  console.log(totalHoursPlayed);
 
   return (
     <main className="main">
