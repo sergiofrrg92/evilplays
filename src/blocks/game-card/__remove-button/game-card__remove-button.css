@@ -1,0 +1,17 @@
+.game-card__remove-button {
+    position: absolute;
+    background: url("../../../images/minus.svg");
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    left: 10px;
+    top: 10px;
+    border: 0;
+    cursor: pointer;
+  }
+  
+  .game-card__remove-button:hover {
+    opacity: 0.6;
+  }
+  
+  
