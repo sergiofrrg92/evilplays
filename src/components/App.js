@@ -5,6 +5,7 @@ import Main from "./Main";
 import GamePopup from "./GamePopup";
 import Footer from "./Footer";
 import EditHoursPopup from "./EditHoursPopup";
+import ErrorPopup from "./ErrorPopup";
 
 import user from "../utils/user";
 
@@ -19,6 +20,7 @@ function App() {
   const [selectedGame, setSelectedGame] = React.useState(null);
   const [selectedGameForEdition, setSelectedGameForEdition] = React.useState(null);
   const [isEditHoursPopupOpen, setIsEditHoursPopupOpen] = React.useState(false);
+  const [isErrorPopupOpen, setIsErrorPopupOpen] = React.useState(false);
   const [currentGameIndex, setCurrentGameIndex] = React.useState(0);
   const [games, setGames] = React.useState([]);
   const [shownGames, setShownGames] = React.useState([]);
@@ -50,6 +52,7 @@ function App() {
       })
       .catch( err => {
         console.log(err);
+        setIsErrorPopupOpen(true);
       });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loggedIn]);
@@ -115,6 +118,7 @@ function App() {
   function closeAllPopups() {
     setSelectedGame(null);
     setIsEditHoursPopupOpen(false);
+    setIsErrorPopupOpen(false);
   }
 
   function handleEditHoursSubmit(game, hours) {
@@ -143,6 +147,7 @@ function App() {
         <GamePopup card={selectedGame} onClose={closeAllPopups}/>
         <Footer/>
         <EditHoursPopup game={selectedGameForEdition} isOpen={isEditHoursPopupOpen} onClose={closeAllPopups} onEditHoursSubmit={handleEditHoursSubmit}/>
+        <ErrorPopup isOpen={ isErrorPopupOpen } onClose={closeAllPopups}/>
         
     </div>
   );
