@@ -3,6 +3,5 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
-  min-height: 250px;
   height: 100%;
 }
