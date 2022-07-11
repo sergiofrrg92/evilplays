@@ -16,7 +16,9 @@ function Footer() {
               <li className="footer__column-link">
                 <a
                   className="footer__link page-link"
-                  href="https://m.me/YPracticum"
+                  href="https://www.facebook.com/sergiofrrgs_pixels-105549538426922"
+                  target="_blank"
+                  rel="noreferrer noopener"
                 >
                   <img
                     className="footer__social-icons"
@@ -29,7 +31,9 @@ function Footer() {
               <li className="footer__column-link">
                 <a
                   className="footer__link page-link"
-                  href="https://instagram.com/y_practicum"
+                  href="https://instagram.com/sergiofrrgs_pixels"
+                  target="_blank"
+                  rel="noreferrer noopener"
                 >
                   <img
                     className="footer__social-icons"
