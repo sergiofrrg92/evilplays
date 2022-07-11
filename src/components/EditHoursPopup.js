@@ -12,7 +12,7 @@ function EditHoursPopup(props) {
 
     React.useEffect(() => {
       setHours(props.game && props.game.hoursPlayed);
-    }, [props.isOpen]);
+    }, [props.isOpen, props.game]);
 
     function handleSubmit(e) {
         // Prevent the browser from navigating to the form address

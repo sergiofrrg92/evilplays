@@ -38,9 +38,6 @@ function App() {
 
     api.getInitialGames()
       .then((newGames) => {
-        console.log("api.getInitialGames: ");
-        console.log(newGames);
-        console.log(newGames.results.slice(0, SHOWN_DELTA));
         setGames(newGames.results);
         if(newGames.results.length >= currentGameIndex + SHOWN_DELTA) {
           setShownGames(newGames.results.slice(0, currentGameIndex+SHOWN_DELTA));
@@ -54,6 +51,7 @@ function App() {
       .catch( err => {
         console.log(err);
       });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loggedIn]);
 
   function handleLogoutClick() {
