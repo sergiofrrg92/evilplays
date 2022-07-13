@@ -1,0 +1,8 @@
+.game-card__star {
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0 auto 10px;
+
+}

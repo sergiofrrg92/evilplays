@@ -1,0 +1,29 @@
+.games__tab-selector {
+    margin: 0 20px 0 0;
+    box-sizing: border-box;
+    padding: 18px 32px;
+    gap: 10px;
+    background: #2F71E5;
+    border: none;
+    box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+    border-radius: 100px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    color: #fff;
+}
+
+.games__tab-selector:hover {
+  background: #0255E5;
+}
+
+@media (max-width: 584px) {
+    .games__tab-selector {
+      width: 100%;
+    }
+
+    .games__tab-selector:last-of-type {
+        margin: 20px 0 0 0;
+      }
+  }
+  

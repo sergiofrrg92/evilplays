@@ -1,0 +1,10 @@
+.footer__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 320px) {
+  .footer__column-link {
+    margin: 0 auto;
+  }
+}
