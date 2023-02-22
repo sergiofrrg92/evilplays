@@ -1,7 +1,5 @@
 # Evilplays Frontend
 
-## OPTIONAL PART 3 OF FINAL PROJECT NOT DONE DUE TO LACK OF TIME. THIS IS A DUMMY SUBMISSION
-
 ## Hosted 
 
 https://sergiofrrg92.github.io/evilplays-frontend/
